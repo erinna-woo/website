@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!--
+  By Erinna Woo 
+  July 2016
+-->
+<!-- ideas: fade image in, 
+  TODO: check if links should be mobile link. placeholder disappear
+if you would like to view this more. click here.  -->
+<html>
+  <head>
+    <title>Erinna Woo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="files/icon.png"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">    
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBaXQTBQQA1EFcEVBY2BSvO-yc2VuEQ95E",
+        authDomain: "personal-website-49e5e.firebaseapp.com",
+        databaseURL: "https://personal-website-49e5e.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <script src="js/main.js"></script>
+    <script src="jquery-3.1.0.min.js"></script>
+  </head>
+  <body onload = "startFunction()">
+    <div id = "mainDiv">
+      <p id = "first">Hello</p>
+      <p id = "second">My name is Erinna. I study computer science at Pomona College.</p> 
+      <p id = "third">Ask me about my resume, LinkedIn or email by typing the query in the textbox below.</p> 
+      <p id = "fourth">For a full list of queries, enter "help".</p> 
+    </div>
+
+    <div id = "userDiv">
+      <input type = "text" id = "userInput" placeholder = "'help'">
+      <button class="ui-button" id = "btnEnter" onhover = "showOptions()" onclick = "userInput()">Enter</button>
+    </div>
+  </body>
+</html>
